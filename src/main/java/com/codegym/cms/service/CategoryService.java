@@ -2,7 +2,7 @@ package com.codegym.cms.service;
 
 import com.codegym.cms.model.Category;
 
-public interface CatelogyService {
+public interface CategoryService {
     Iterable<Category> findAll();
 
     Category findById(Long id);

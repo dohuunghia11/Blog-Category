@@ -3,8 +3,7 @@ package com.codegym.cms.controller;
 import com.codegym.cms.model.Blog;
 import com.codegym.cms.model.Category;
 import com.codegym.cms.service.BlogService;
-import com.codegym.cms.service.BlogServiceImpl;
-import com.codegym.cms.service.CatelogyService;
+import com.codegym.cms.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,11 +18,11 @@ public class BlogController {
     private BlogService blogService;
 
     @Autowired
-    private CatelogyService catelogyService;
+    private CategoryService categoryService;
 
     @ModelAttribute("catelogys")
     public Iterable<Category> catelogys(){
-        return catelogyService.findAll();
+        return categoryService.findAll();
     }
 
     @GetMapping("/create-blog")

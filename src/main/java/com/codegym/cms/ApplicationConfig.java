@@ -2,7 +2,7 @@ package com.codegym.cms;
 
 import com.codegym.cms.service.BlogService;
 import com.codegym.cms.service.BlogServiceImpl;
-import com.codegym.cms.service.CatelogyService;
+import com.codegym.cms.service.CategoryService;
 import com.codegym.cms.service.CategoryServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -49,12 +49,12 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     }
 
     @Bean
-    public BlogService customerRepository() {
+    public BlogService blogService(){
         return new BlogServiceImpl();
     }
 
     @Bean
-    public CatelogyService customerService() {
+    public CategoryService categoryService() {
         return new CategoryServiceImpl();
     }
 
